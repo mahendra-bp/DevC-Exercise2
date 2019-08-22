@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <script>
+        function masukan(angka) {
+            document.form.textview.value = document.form.textview.value + angka
+        }
+
+        function hapus() {
+            document.form.textview.value = ''
+        }
+
+        function hitung() {
+            var a = document.form.textview.value
+            document.form.textview.value = eval(a)
+
+        }
+    </script>
+
+    <style>
+        body {
+            margin: 250px auto;
+            width: 400px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <form name="form">
+        <input class="textview" name="textview" autofocus>
+    </form>
+
+    <table>
+        <tr>
+            <td><input type="button" value="1" onclick="masukan(1)"></input></td>
+            <td><input type="button" value="2" onclick="masukan(2)"></input></td>
+            <td><input type="button" value="3" onclick="masukan(3)"></input></td>
+            <td><input type="button" value="4" onclick="masukan(4)"></input></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="5" onclick="masukan(5)"></input></td>
+            <td><input type="button" value="6" onclick="masukan(6)"></input></td>
+            <td><input type="button" value="7" onclick="masukan(7)"></input></td>
+            <td><input type="button" value="8" onclick="masukan(8)"></input></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="9" onclick="masukan(9)"></input></td>
+            <td><input type="button" value="0" onclick="masukan(0)"></input></td>
+            <td><input type="button" value="=" onclick="hitung()"></input></td>
+            <td><input type="button" value="/" onclick="masukan('/')"></input></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="*" onclick="masukan('.')"></input></td>
+            <td><input type="button" value="+" onclick="masukan('+')"></input></td>
+            <td><input type="button" value="-" onclick="masukan('-')"></input></td>
+            <td><input type="button" value="C" onclick="hapus()"></input></td>
+        </tr>
+    </table>
+</body>
+
+</html>
